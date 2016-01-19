@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qlA-Oy-skq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Custom View Controller-->
+        <scene sceneID="wvh-s8-ddU">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="qlA-Oy-skq" customClass="CustomViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="vDV-iG-kbs"/>
+                        <viewControllerLayoutGuide type="bottom" id="F8c-dG-3iD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="Lcf-sh-itO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-2o-7TO">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="610"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08p-64-EW2">
+                                <rect key="frame" x="8" y="628" width="74" height="31"/>
+                                <color key="backgroundColor" red="0.9995381236076355" green="0.0016616393113508821" blue="0.12072489410638809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="APh-9U-YhQ"/>
+                                    <constraint firstAttribute="height" constant="31" id="jUb-6N-XIi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F8c-dG-3iD" firstAttribute="top" secondItem="08p-64-EW2" secondAttribute="bottom" constant="8" id="7Ox-4Q-Pc1"/>
+                            <constraint firstItem="HXc-2o-7TO" firstAttribute="leading" secondItem="Lcf-sh-itO" secondAttribute="leadingMargin" constant="-20" id="7nA-HW-Y8y"/>
+                            <constraint firstItem="F8c-dG-3iD" firstAttribute="top" secondItem="HXc-2o-7TO" secondAttribute="bottom" constant="57" id="LNK-DJ-ca7"/>
+                            <constraint firstItem="08p-64-EW2" firstAttribute="leading" secondItem="Lcf-sh-itO" secondAttribute="leadingMargin" constant="-8" id="XoA-ii-Skd"/>
+                            <constraint firstItem="HXc-2o-7TO" firstAttribute="top" secondItem="Lcf-sh-itO" secondAttribute="topMargin" id="d0i-51-xUU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HXc-2o-7TO" secondAttribute="trailing" constant="-20" id="maz-ia-3ID"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bottomView" destination="08p-64-EW2" id="9Vm-DQ-2sh"/>
+                        <outlet property="tableView" destination="HXc-2o-7TO" id="U0L-nQ-v0e"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHr-ax-1bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="281.5" y="44.5"/>
         </scene>
     </scenes>
 </document>
